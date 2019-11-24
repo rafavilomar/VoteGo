@@ -1,0 +1,72 @@
+/*-------------------------------------------------HEADER----------------------------------------------*/
+
+
+.icono{
+    margin-bottom: 5px;
+    width: 20px;
+    margin-left: 5px;
+    margin-right: 5px;
+  }
+  .navBotones{
+    margin-left: auto;
+    margin-right: 0px;
+  }
+  /*------------------------------------FIN DEL HEADER------------------------------------------*/
+
+
+  /*------------------------------------HOME------------------------------------------*/
+  
+  .welcome{
+    margin-top: 150px; 
+  }
+  .barra{
+    margin-top: 150px;
+  }
+  .iconoHome{
+    width: 50px;
+  }
+  .barText{
+    margin-top: 15px;
+  }
+  /*------------------------------------FIN DE HOME------------------------------------------*/
+
+  
+
+/*------------------------------------LOGIN------------------------------------------*/
+.contenedorLogin
+{
+    max-width: 500px;
+    width: 100%;
+    margin: auto;
+    margin-top: 10%;
+    box-shadow: 0px 0px 5px 2px rgb(176, 176, 176);
+    padding: 1%;
+
+}
+
+.titulo
+{
+    padding: 2%;
+    text-align: center;
+    color: rgb(29, 145, 29);
+}
+
+.datos
+{
+    border-color: black;
+    width: 80%;
+    margin: auto;
+    border-radius: 2%;
+    border-width: 0.2mm;
+    padding: 2%;
+    border-top-style: solid;
+    border-top-width: 1.5px;
+    border-top-color: green;
+}
+
+.opcion2
+{
+    text-align: center;
+}
+
+/*------------------------------------FIN DE LOGIN------------------------------------------*/
