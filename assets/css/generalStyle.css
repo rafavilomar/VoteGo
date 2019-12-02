@@ -31,48 +31,61 @@
 
   
 
-/*------------------------------------LOGIN------------------------------------------*/
-.contenedorLogin
-{
-    max-width: 500px;
-    width: 100%;
-    margin: auto;
-    margin-top: 10%;
-    box-shadow: 0px 0px 5px 2px rgb(176, 176, 176);
-    padding: 1%;
+/*!------------------------------------LOGIN------------------------------------------*/
+    .contenedorLogin
+    {
+        max-width: 500px;
+        width: 100%;
+        margin: auto;
+        margin-top: 10%;
+        box-shadow: 0px 0px 5px 2px rgb(176, 176, 176);
+        padding: 1%;
 
-}
+    }
 
-.titulo
-{
-    padding: 2%;
-    text-align: center;
-    color: rgb(29, 145, 29);
-}
+    .titulo
+    {
+        padding: 2%;
+        text-align: center;
+        color: rgb(29, 145, 29);
+    }
 
-.datos
-{
-    border-color: black;
-    width: 80%;
-    margin: auto;
-    border-radius: 2%;
-    border-width: 0.2mm;
-    padding: 2%;
-    border-top-style: solid;
-    border-top-width: 1.5px;
-    border-top-color: green;
-}
+    .datos
+    {
+        border-color: black;
+        width: 80%;
+        margin: auto;
+        border-radius: 2%;
+        border-width: 0.2mm;
+        padding: 2%;
+        border-top-style: solid;
+        border-top-width: 1.5px;
+        border-top-color: green;
+    }
 
-.opcion2
-{
-    text-align: center;
-}
+    .opcion2
+    {
+        text-align: center;
+    }
 
 /*------------------------------------FIN DE LOGIN------------------------------------------*/
 
 /*------------------------------------CASILLA DE VOTACION-----------------------------------*/
-.prueba{
-  margin-top: 100px;
-}
+    .prueba{
+      margin-top: 100px;
+    }
 
 /*---------------------------------FIN DE CASILLA DE VOTACION-------------------------------*/
+
+/*------------------------------------Modulo de configuracion-----------------------------------*/
+.contenedorConf{
+  margin-top: 100px;
+}
+.encabezado{
+  background-color: rgb(226, 226, 226);
+  padding: 1%;
+}
+.cuerpo{
+  padding: 3%;
+}
+/*------------------------------------Fin de Modulo de configuracion-----------------------------------*/

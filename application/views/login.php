@@ -42,7 +42,7 @@
                           <section class="opcion2">
                               <p>No tienes una cuenta?
                               Registrate ahora! <br>
-                              <a href="../Registrase/registrarse.html" class="linkRegistrarse">Registrarse</a></p>
+                              <a href="<?= base_url('configuracion/registrarse');?>" class="linkRegistrarse">Registrarse</a></p>
                           </section>
                           
                         </div>

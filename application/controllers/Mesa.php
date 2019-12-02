@@ -5,7 +5,7 @@ class Mesa extends CI_Controller {
 
     public function sesion()
     {
-		$this->load->view('mesaElectoral/login');
+		$this->load->view('login');
     }
 	public function validar()
 	{
