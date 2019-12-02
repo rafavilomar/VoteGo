@@ -87,16 +87,9 @@
                     </div>
                     <!-------Boton Guardar---------->
                     <div class="btn1">
-                        <button class="btn btn-success btn-lg btn1" name="guardar" id="guardar" type="submit">Guardar</button>
+                        <button class="btn btn-success btn-lg btn1" name="guardar" id="guardar" type="submit">Validar</button>
                     </div>
                 </div>
-                <!--<input type="hidden" name="nombre" value="<?=isset($d->Nombres)? $d->Nombres:"";?>">
-                <input type="hidden" name="apellido" value="<?=isset($d->Apellido1)? $d->Apellido1:"";?> <?=isset($d->Apellido2)? $d->Apellido2:"";?>">
-                <input type="hidden" name="cedula" value="<?=isset($d->Cedula)? $d->Cedula:"";?>">
-                <input type="hidden" name="fechaNacimiento" value="<?=isset($d->FechaNacimiento)? $d->FechaNacimiento:"";?>">
-                <input type="hidden" name="edad" value="<?=isset($edad)&& $edad<150? $edad:"";?>">
-                <input type="hidden" name="lugarNacimiento" value="<?=isset($d->LugarNacimiento)? $d->LugarNacimiento:"";?>">
-                <input type="hidden" name="foto" value="<?=isset($d->Foto)? $d->Foto:"";?>">-->
 
                 <input type="hidden" name="nombre" value="<?php echo $d->Nombres;?>">
                 <input type="hidden" name="apellido" value="<?php echo $d->Apellido1;?> <?php echo $d->Apellido2;?>">
