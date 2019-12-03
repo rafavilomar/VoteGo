@@ -1,8 +1,6 @@
 <?= $header?>
 <?php
-    if($_POST){
-        header("Location: ". base_url('configuracion/partidos'));
-    }
+    //los datos se estan guardas en el modulo de los archivos
 ?>
 <div class="container">
     <div class="contenedorConf border-bottom encabezado border-dark">
@@ -11,20 +9,20 @@
         
     </div>
     <div>
-        <form method="POST">
+        <form method="POST" action="<?= base_url('configuracion/partidos')?>">
         <!--------------Elecciones----------------------------->
         <div class="cuerpo">
             <div class="form-group">
                 <label for="exampleInputEmail1">Nombre</label>
-                <input type="text" class="form-control" id="nombre" aria-describedby="" placeholder="Ingresa el Titulo/Nombre de para esta Elección">
+                <input type="text" class="form-control" name="nombre" aria-describedby="" placeholder="Ingresa el Titulo/Nombre de para esta Elección">
             </div>
             <div class="form-group">
                 <label for="exampleInputPassword1">Fecha:</label>
-                <input type="date" class="form-control" id="fecha" placeholder="Seleccione una fecha">
+                <input type="date" class="form-control" name="fecha" placeholder="Seleccione una fecha">
             </div>
             <div class="form-group">
                 <label for="exampleFormControlTextarea1">Descripción</label>
-                <textarea class="form-control" id="descripcion" rows="3" placeholder="Añade mas detalle sobre está elección"></textarea>
+                <textarea class="form-control" name="descripcion" rows="3" placeholder="Añade mas detalle sobre está elección"></textarea>
             </div>
         </div>
         <!--------------Fin de Elecciones----------------------------->
@@ -69,7 +67,7 @@
 
                     </div>
                     <div class="col-4 text-right">
-                        <a href="<?= base_url('configuracion/partidos')?>"><button type="submit" class="btn btn-success">Siguiente</button></a>
+                        <a href="<?= base_url('configuracion/partidos')?>"><button type="submit" class="btn btn-success" name="eleccion">Siguiente</button></a>
                     </div>
                 </div>
         </form>

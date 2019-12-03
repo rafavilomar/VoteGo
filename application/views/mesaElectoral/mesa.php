@@ -26,7 +26,7 @@
         $p->lugarNacimiento = $_POST['lugarNacimiento'];
         $p->foto = $_POST['foto'];
 
-        //Funcion que guardara los datos
+        saveDato($p); //Validando al votante
     }
 ?>
 <?= $header?>

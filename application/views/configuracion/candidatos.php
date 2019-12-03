@@ -28,7 +28,17 @@
         $d->color = $_POST['color'];
         $nombre_partido = $d->nombre;
 
-        //Aqui va la Funcion para guardar partidosS
+        savePartidos($d);
+    }
+
+    //!Guardando los candidatos
+    if(isset($_POST['agregarCand'])){
+        $d=new stdClass();
+        $d->nombre = $_POST['nombre'];
+        $d->apellido = $_POST['apellido'];
+        $d->cedula = $_POST['cedula'];
+        $d->foto = $_POST['foto'];
+        saveCandidatos($d);
     }
 ?>
 
@@ -40,6 +50,7 @@
         <!--Ingresar datos------------------------------->
         <div class="col-md-10" id="ingresar_datos">
             <h4 class="text-center text-secondary">Agregar Candidatos</h4>
+            <input type="hidden" name="foto" value="<?= isset($d->Foto)? $d->Foto:"";?>">
             <div class="form-group row">
                 <label for="" class="col-sm-4 col-form-label">Nombre/s:</label>
                 <div class="col-sm-8">
@@ -96,7 +107,7 @@
             </div>
                 <div class="btnBasico"><br><br>
                     <button name="consultar" type="button" class="btn btn-primary btn-block" data-toggle="modal" data-target="#consultar">Consultar cédula</button>
-                    <button name="updt" type="submit" class="btn btn-success btn-block">Agregar</button>
+                    <button name="agregarCand" type="submit" class="btn btn-success btn-block">Agregar</button>
                 </div>
 
             </div>

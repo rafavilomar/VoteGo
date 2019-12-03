@@ -1,4 +1,16 @@
 <?= $header?>
+<?php
+        //!Datos recibdos de la creacion de la eleccion
+        if(isset($_POST['eleccion'])){
+            
+            $p=new stdClass();
+            $p->nombre = $_POST['nombre'];
+            $p->fecha = $_POST['fecha'];
+            $p->descripcion = $_POST['descripcion'];
+    
+            saveEleccion($p); //Validando al votante
+        }
+?>
 <div class="container">
     <div class="contenedorConf border-bottom encabezado border-dark">
         <h4>Configura los partidos</h4>
@@ -20,6 +32,10 @@
             <div class="form-group">
                 <label for="exampleInputPassword1">Color</label>
                 <input type="text" class="form-control" name="color" placeholder="Color que representa al partido">
+            </div>
+            <div class="form-group">
+                <label for="" class="">Partido:</label>
+                    <input readonly value="<?= (isset($_POST['eleccion']))?$p->nombre: ""; ?>" name="" type="text" class="form-control" id="inputEmail" readonly="readonly">
             </div>
             
             <div class="">
