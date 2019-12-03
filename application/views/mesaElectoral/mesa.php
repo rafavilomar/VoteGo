@@ -14,6 +14,7 @@
         $edad = calculaedad($d->FechaNacimiento);
 
     }
+    
     //para validar a un ciudadano
     if ($_POST){
         $p=new stdClass();
@@ -31,11 +32,11 @@
 <?= $header?>
     <!---Contenedor de datos------------------>
     <br><br><br>
-        <div class="contenedor">
+        <div class="contenedorMesa">
             <form action="" method="POST" id="frm1">        
                 <!-------Boton Consultar---------->
                 <div class="text-center">
-                    <button  style="margin-top:200px" class="btn btn-outline-info btn-lg btn1" type="button" data-toggle="modal" data-target="#consultar">Consultar una cédula</button>
+                    <button  style="margin-top:100px; margin-bottom: 5px;" class="btn btn-outline-info btn-lg btn1" type="button" data-toggle="modal" data-target="#consultar">Consultar una cédula</button>
                 </div>
                 <!-----Alerta en caso de Error----------->
                     <?php if (isset($_GET['cedula']) && is_null($d->Cedula)):?>
@@ -56,7 +57,7 @@
                 <div class="row">
                 <?php if (isset($d->Cedula)):?>
                     <!-----Datos de la consulta------------->
-                    <div class="datos col-md-8">
+                    <div class="datosMesa col-md-8">
                         <div class="row datos2">
                             <div class="col-auto">
                                 <ul class="list-group list-group-flush ulDatos">
@@ -86,7 +87,7 @@
                         <img src="<?=$d->Foto; ?>" alt=" Consulta a una persona para ver su foto">
                     </div>
                     <!-------Boton Guardar---------->
-                    <div class="btn1">
+                    <div class="btn1 text-center">
                         <button class="btn btn-success btn-lg btn1" name="guardar" id="guardar" type="submit">Validar</button>
                     </div>
                 </div>

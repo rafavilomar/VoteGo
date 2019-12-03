@@ -23,10 +23,10 @@
 
             <!-- Buttons -->
             <div class="text-center text-md-left">
-              <a href="#" class="btn btn-primary shadow mr-1">
+              <a href="<?= base_url('votaciones');?>" class="btn btn-primary shadow mr-1">
                 Participa en una votación
               </a>
-              <a href="#" class="btn btn-light light">
+              <a href="<?= base_url('configuracion');?>" class="btn btn-light light">
                 Crea una elección
               </a>
             </div>
