@@ -1,14 +1,11 @@
 
 
 <?= $header ?>
-<<<<<<< HEAD
 <?php
     if($_GET){
         header("Location: ". base_url('votaciones/votar'));
     }
 ?>
-=======
->>>>>>> 558a027e19a7986146bb1ad8ef696b3eb1fd3699
 
 <br><br><br>
 <div class="contenedor">
