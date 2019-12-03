@@ -49,10 +49,22 @@
             <!----Fin de Casilla del candidato----------------------------------->
             
         </div>
+
+<hr>
+
+        <div class="row justify-content-between">
+                    <div class="col-4">
+                        <a href="<?= base_url('Votaciones/reportespdf')?>"><button type="button" class="btn btn-secondary">Imprimir Resultados</button></a>
+                    </div>
+                    <div class="col-4 text-right">
+                        <a href="<?= base_url('Votaciones/Voletines')?>"><button type="submit" class="btn btn-success">Finalizar</button></a>
+                    </div>
+                </div>
+
     </div>
 <!-----------------------Fin de candidatos del nivel----------------------------------------------->
 
-<!--
+<!--style="margin-left:150%; width:200px"
     Eso de arriba hay que colocarlo en una funcion para que se genere dependiendo de la cantidad de niveles-->
 
 <?= $footer?>
