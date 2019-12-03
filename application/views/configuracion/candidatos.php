@@ -40,6 +40,7 @@
         $d->cedula = $_POST['cedula'];
         $d->foto = $_POST['foto'];
         $d->partido = $_POST['partido'];
+        $d->nivel = $_POST['nivel'];
         saveCandidatos($d);
     }
 ?>

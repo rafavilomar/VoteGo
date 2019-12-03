@@ -26,12 +26,14 @@
     function saveCandidatos($dato){
         $CI =& get_instance();
         $partido = Consultas($dato->partido, 'nombre', 'partidos');
+        $nivel = Consultas($dato->nivel, 'titulo', 'niveles');
         $data = array(
             'nombres' => $dato->nombre,
             'apellidos'  => $dato->apellido,
             'foto'  => $dato->foto,
             'cedulaC' => $dato->cedula,
-            'id_partidos' => $eleccion->id_elecciones
+            'id_partidos' => $partido->id_partidos,
+            'id_niveles' => $nivel->id_niveles
         );
         $CI->db->insert('candidatos', $data);
     }
