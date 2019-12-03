@@ -28,6 +28,12 @@
             $includes['footer'] = $this->load->view('includes/footer','',TRUE);
             $this->load->view('configuracion/partidos', $includes);
         }
+        public function candidatos()
+        {
+            $includes['header'] = $this->load->view('includes/header','',TRUE);
+            $includes['footer'] = $this->load->view('includes/footer','',TRUE);
+            $this->load->view('configuracion/candidatos', $includes);
+        }
     
     }
     

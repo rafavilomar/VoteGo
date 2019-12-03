@@ -88,4 +88,10 @@
 .cuerpo{
   padding: 3%;
 }
+
+.imgCandidato{
+  width: 100%;
+  margin: auto;
+  max-width: 200px;
+}
 /*------------------------------------Fin de Modulo de configuracion-----------------------------------*/
