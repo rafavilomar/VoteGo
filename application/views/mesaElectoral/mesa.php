@@ -34,8 +34,8 @@
         <div class="contenedor">
             <form action="" method="POST" id="frm1">        
                 <!-------Boton Consultar---------->
-                <div class="">
-                    <button class="btn btn-outline-info btn-lg btn1" type="button" data-toggle="modal" data-target="#consultar">Consultar una cédula</button>
+                <div class="text-center">
+                    <button  style="margin-top:200px" class="btn btn-outline-info btn-lg btn1" type="button" data-toggle="modal" data-target="#consultar">Consultar una cédula</button>
                 </div>
                 <!-----Alerta en caso de Error----------->
                     <?php if (isset($_GET['cedula']) && is_null($d->Cedula)):?>
