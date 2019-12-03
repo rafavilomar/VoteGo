@@ -33,8 +33,10 @@
             <table class="table">
                 <thead>
                     <tr>
-                    <th scope="col">Titulo</th>
-                    <th scope="col">Descripcion</th>
+                    <th scope="col">Nombres</th>
+                    <th scope="col">Apellidos</th>
+                    <th scope="col">Cédula</th>
+                    <th scope="col">Foto</th>
                     </tr>
                 </thead>
                 <tbody id="f_tbody">
