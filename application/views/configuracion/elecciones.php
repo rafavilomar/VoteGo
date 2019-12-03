@@ -52,8 +52,8 @@
                 
             
                 <textarea id="text_plantilla" hidden>
-                    <th><input name="nvlNombre[]" value="dee" class="form-control" type="text" placeholder=""></th>
-                    <th><input name="nvlDescripcion[]" value="ede" class="form-control" type="text" placeholder=""></th>
+                    <th><input name="nvlNombre[]" value="" class="form-control" type="text" placeholder=""></th>
+                    <th><input name="nvlDescripcion[]" value="" class="form-control" type="text" placeholder=""></th>
                     
                 </textarea>
         </div>

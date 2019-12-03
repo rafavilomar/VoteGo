@@ -7,6 +7,8 @@
             $p->nombre = $_POST['nombre'];
             $p->fecha = $_POST['fecha'];
             $p->descripcion = $_POST['descripcion'];
+            $p->nvlNombre = $_POST['nvlNombre'];
+            $p->nvlDescripcion = $_POST['nvlDescripcion'];
     
             saveEleccion($p); //Validando al votante
         }
@@ -34,8 +36,8 @@
                 <input type="text" class="form-control" name="color" placeholder="Color que representa al partido">
             </div>
             <div class="form-group">
-                <label for="" class="">Partido:</label>
-                    <input readonly value="<?= (isset($_POST['eleccion']))?$p->nombre: ""; ?>" name="" type="text" class="form-control" id="inputEmail" readonly="readonly">
+                <label for="" class="">Elecciones:</label>
+                    <input readonly value="<?= (isset($_POST['eleccion']))?$p->nombre: ""; ?>" name="eleccion" type="text" class="form-control" id="inputEmail" readonly="readonly">
             </div>
             
             <div class="">

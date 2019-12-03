@@ -26,6 +26,7 @@
         $d->nombre = $_POST['nombre'];
         $d->siglas = $_POST['siglas'];
         $d->color = $_POST['color'];
+        $d->eleccion = $_POST['eleccion'];
         $nombre_partido = $d->nombre;
 
         savePartidos($d);
@@ -38,6 +39,7 @@
         $d->apellido = $_POST['apellido'];
         $d->cedula = $_POST['cedula'];
         $d->foto = $_POST['foto'];
+        $d->partido = $_POST['partido'];
         saveCandidatos($d);
     }
 ?>
@@ -96,7 +98,7 @@
             <div class="form-group row">
                 <label for="" class="col-sm-4 col-form-label">Partido:</label>
                 <div class="col-sm-8">
-                    <input readonly value="<?= (isset($_POST['crear']) || isset($_POST['candidatos']))?$_POST['nombre']: $partido; ?>" name="empresa" type="text" class="form-control" id="inputEmail" readonly="readonly">
+                    <input readonly value="<?= (isset($_POST['crear']) || isset($_POST['candidatos']))?$_POST['nombre']: $partido; ?>" name="partido" type="text" class="form-control" id="inputEmail" readonly="readonly">
                 </div>
             </div>
         </div>
