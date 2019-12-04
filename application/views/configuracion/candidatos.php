@@ -106,7 +106,7 @@
     <!------------boton------------------>
          <div class="col-md-2" id="botones_basicos mx-auto">
             <div>
-                <img src="<?= isset($d->Foto)? $d->Foto:"" ?>" alt="Imagen del candidato" class="imgCandidato">
+                <img src="<?= isset($d->Foto)? $d->Foto:"" ?>" alt="Imagen del candidato" class="imgCandidato2">
             </div>
                 <div class="btnBasico"><br><br>
                     <button name="consultar" type="button" class="btn btn-primary btn-block" data-toggle="modal" data-target="#consultar">Consultar cédula</button>
@@ -130,8 +130,6 @@
                     <th scope="col">Nombres</th>
                     <th scope="col">Apellidos</th>
                     <th scope="col">Cédula</th>
-                    <th scope="col">Fecha de Nacimiento</th>
-                    <th scope="col">Lugar de Nacimiento</th>
                     <th scope="col">Nivel</th>
                     <th scope="col">Partido</th>
                     <th scope="col">Foto</th>
@@ -139,19 +137,19 @@
                     </tr>
                 </thead>
                 <?php 
-                    //$candidatos = showCandidatos();
-                    //foreach($candidatos as $candidato){
+                    $candidatos = showConfig('vista_candidatos');
+                    foreach($candidatos as $candidato){
                 ?>
-                        <!--<tr>
-                        <th scope="row"><?=$candidato->id?></th>
-                        <td><?=$candidato->nombre?></td>
+                        <tr>
+                        <th scope="row"><?=$candidato->nombre?></th>
                         <td><?=$candidato->apellido?></td>
                         <td><?=$candidato->cedula?></td>
-                        <td><?=$candidato->motivo?></td>
-                        <td><img src="<?=$candidato->foto?>" alt=""></td>-->
+                        <td><?=$candidato->nivel?></td>
+                        <td><?=$candidato->partido?></td>
+                        <td><img src="<?=$candidato->foto?>" alt=""></td>-
                         </tr>
                     <?php
-                       // }
+                        }
                     ?>
             </table>
         </div>

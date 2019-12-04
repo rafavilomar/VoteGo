@@ -58,20 +58,26 @@
                     <th scope="col">Nombre</th>
                     <th scope="col">Siglas</th>
                     <th scope="col">Color</th>
-                    <th scope="col">Cantidad de empleados</th>
+                    <th scope="col">Cantidad de candidatos</th>
                     <th scope="col">...</th>
                     </tr>
                 </thead>
-                <tbody id="f_tbody">
-                    <td>Ejemplo nom</td>
-                    <td>Ejemplo siglas</td>
-                    <td>Ejemplo color</td>
-                    <td>Ejemplo cant</td>
+                    <?php 
+                        $partidos = showConfig('vista_partidos');
+                        foreach($partidos as $partido){
+                    ?>
+                    <tr>
+                    <td scope="row"><?=$partido->nombre?></td>
+                    <td><?=$partido->siglas?></td>
+                    <td><?=$partido->color?></td>
+                    <td><?=$partido->cant_candidatos?></td>
                     <td>
                         <button onclick="" type="button" class="btn btn-danger">Del</button>
                         <button name="candidatos" onclick="" type="submit" class="btn btn-info">Candidatos</button>
-                    </th>
-                </tbody>
+                    
+                    </tr>
+                    <?php
+                    }?>
                 </table>
         </div>
             

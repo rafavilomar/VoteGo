@@ -3,6 +3,8 @@
     defined('BASEPATH') OR exit('No direct script access allowed');
     
     class Configuracion extends CI_Controller {
+        public $eleccion;
+        public $partido;
     
         public function index()
         {

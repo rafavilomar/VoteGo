@@ -38,12 +38,13 @@
         $CI->db->insert('candidatos', $data);
     }
     
+    //Funcion para guardar los niveles
     function saveNiveles($titulo, $desc, $elec)
     {
         $CI =& get_instance();
         //para los niveles
         $todo = array();
-        $eleccion = Consultas($elec, 'nombre', 'elecciones');
+        $eleccion = Consultas($elec, 'nombre', 'elecciones');//En esta variable almacenamos la eleccion a la cual pertenera el nivel
         foreach($titulo as $k=>$nom){
             $todo[] = array('id_elecciones'=>$eleccion->id_elecciones, 
                             'titulo'=>$nom, 
@@ -52,14 +53,14 @@
         $CI->db->insert_batch('niveles', $todo);
         
     }
-    /*function showCandidatos(){
+    function showConfig($tabla){
         $CI =& get_instance();
-        $partido = Consultas($dato->partido, 'nombre', 'partidos');
-        $resultado = $CI->db->get('listado');
+        $resultado = $CI->db->get($tabla);
         return $resultado->result();
-    }*/
+    }
 
     //!Consulta especifica
+    //Es una funcion un poco mas especifica que la anterior ya que posee una condicion
     function Consultas($nombre, $columna, $tabla){
         $CI =& get_instance();
         $CI->db->where($columna, $nombre);
