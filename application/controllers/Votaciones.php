@@ -4,6 +4,14 @@ defined('BASEPATH') OR exit('No direct script access allowed');
 
 class Votaciones extends CI_Controller {
 
+    public function __construct()
+	{
+		parent::__construct();	
+
+		$this->load->model('modelo');
+	}
+
+
     public function index()
     {
 		$includes['header'] = $this->load->view('includes/header','',TRUE);
@@ -12,9 +20,16 @@ class Votaciones extends CI_Controller {
     }
     public function votar()
     {
-		$includes['header'] = $this->load->view('includes/header','',TRUE);
-        $includes['footer'] = $this->load->view('includes/footer','',TRUE);
-        $this->load->view('CasillaVotacion/casilla_votacion', $includes);
+        
+
+        $data = array();
+
+        $data['query']=$this->modelo->cargarCandidatos();
+        //echo var_dump($data);
+
+		/*$includes['header'] = $this->load->view('includes/header','',TRUE);
+        $includes['footer'] = $this->load->view('includes/footer','',TRUE);*/
+        $this->load->view('CasillaVotacion/casilla_votacion', $data);
     }
 
     /*************************los voletines(nuevo)************************************************ */
