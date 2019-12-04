@@ -30,7 +30,7 @@ class Votaciones extends CI_Controller {
 		/*$includes['header'] = $this->load->view('includes/header','',TRUE);
         $includes['footer'] = $this->load->view('includes/footer','',TRUE);*/
         $this->load->view('CasillaVotacion/casilla_votacion', $data);
-    }
+     }
 
     /*************************los voletines(nuevo)************************************************ */
     public function Voletines()

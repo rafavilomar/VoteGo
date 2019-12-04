@@ -1,9 +1,7 @@
 <?php
 
 
-defined('BASEPATH') OR exit('No direct script access allowed');
-
-class modelo extends CI_Controller {
+class Modelo extends CI_Model {
     public function __construct()
 	{
 		parent::__construct();	
@@ -17,6 +15,7 @@ class modelo extends CI_Controller {
         $this->db->join('partidos','candidatos.id_partidos=partidos.id_partidos');
         $this->db->join('niveles','candidatos.id_niveles=niveles.id_niveles');
         return  $this->db->get();
+    }
 
         
         /*foreach ($query->result() as $key) {
@@ -30,6 +29,7 @@ class modelo extends CI_Controller {
         return $query->result();*/
     }
 
-}
+
 
 /* End of file Controllername.php */
+?>
