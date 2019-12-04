@@ -22,6 +22,17 @@
         );
         $CI->db->insert('partidos', $data);
     }
+    function saveVotantes($dato){
+        $CI =& get_instance();
+        $data = array(
+            'nombreV' => $dato->nombreV,
+            'nombreC'  => $dato->nombreC,
+            'partidoC'  => $dato->partidoC,
+            'cargoC' => $dato->cargoC
+            
+        );
+        $CI->db->insert('mivoto', $data);
+    }
 
     function saveCandidatos($dato){
         $CI =& get_instance();
