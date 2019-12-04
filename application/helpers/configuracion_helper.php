@@ -37,15 +37,7 @@
         );
         $CI->db->insert('candidatos', $data);
     }
-
-    /*function showCandidatos(){
-        $CI =& get_instance();
-        
-        $query = $this->db->get('candidatos');
-
-        return $query->result();
-    }*/
-
+    
     function saveNiveles($titulo, $desc, $elec)
     {
         $CI =& get_instance();
