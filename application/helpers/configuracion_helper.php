@@ -60,12 +60,12 @@
         $CI->db->insert_batch('niveles', $todo);
         
     }
-    function showCandidatos(){
+    /*function showCandidatos(){
         $CI =& get_instance();
         $partido = Consultas($dato->partido, 'nombre', 'partidos');
         $resultado = $CI->db->get('listado');
         return $resultado->result();
-    }
+    }*/
 
     //!Consulta especifica
     function Consultas($nombre, $columna, $tabla){
