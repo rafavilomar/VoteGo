@@ -1,4 +1,18 @@
 
+
+<?php
+
+if($_POST){
+           
+    $v=new stdClass();
+    $v->nombreV = "Votante";
+    $v->nombreC	 = $_POST['nombreC'];
+    $v->partidoC =  $_POST['partidoC'];
+    $v->cargoC =  $_POST['cargoC'];
+
+    saveVotantes($v);
+}
+?>
 <!DOCTYPE html>
 <html lang="en">
 
@@ -114,7 +128,9 @@
                             <dd class='col-sm-10'>{$key->titulo}</dd>
                         </div>
                         <input type='submit' value='Votar' class='btn btn-primary'>
-                        <input type='text' name='cedulaC' id='cedulaC' value='$key->cedulaC'>
+                        <input type='hidden' name='nombreC' id='nombreC' value='$key->nombres'>
+                        <input type='hidden' name='cargoC' id='cargoC' value='$key->titulo'>
+                        <input type='hidden' name='partidoC' id='partidoC' value='$key->nombre'>
                     </div>
                     </form>
                 </div>
@@ -154,7 +170,7 @@
                 <a href="<?= base_url('Votaciones/reportespdf') ?>"><button type="button" class="btn btn-secondary">Imprimir Resultados</button></a>
             </div>
             <div class="col-4 text-right">
-                <a href=""><button type="submit" class="btn btn-success">Finalizar</button></a>
+                <a href="<?= base_url('Votaciones/Voletines') ?>"><button type="submit" class="btn btn-success">Finalizar</button></a>
             </div>
         </div>
         
