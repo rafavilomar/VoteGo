@@ -37,7 +37,7 @@
                 <!-------Boton Consultar---------->
                 <div class="text-center">
                     <button  style="margin-top:100px; margin-bottom: 5px;" class="btn btn-outline-info btn-lg btn1" type="button" data-toggle="modal" data-target="#consultar">Consultar una cédula</button>
-                </div>
+                </div><br>
                 <!-----Alerta en caso de Error----------->
                     <?php if (isset($_GET['cedula']) && is_null($d->Cedula)):?>
                         <div class="alertaError">
@@ -90,7 +90,7 @@
                     <div class="btn1 text-center">
                         <button class="btn btn-success btn-lg btn1" name="guardar" id="guardar" type="submit">Validar</button>
                     </div>
-                </div>
+                </div><br>
 
                 <input type="hidden" name="nombre" value="<?php echo $d->Nombres;?>">
                 <input type="hidden" name="apellido" value="<?php echo $d->Apellido1;?> <?php echo $d->Apellido2;?>">
@@ -102,6 +102,40 @@
             
                 <?php endif;?>
             </form>
+
+<!----------------Tabla que muestra a los candidatos de este partido--------------------->
+<form method="POST" action="">
+    <div class=" container justify-content-center">
+        <!--Tabla con datos de personal------------>
+        <div class="">
+            <table class="table">
+                <thead class="thead-dark">
+                    <tr>
+                    <th scope="col">Nombres</th>
+                    <th scope="col">Apellidos</th>
+                    <th scope="col">Cédula</th>
+                    <th scope="col">Signo Zodiacal</th>
+                    </tr>
+                </thead>
+                <?php 
+                    $votantes = showConfig('votantes');
+                    foreach($votantes as $votante){
+                ?>
+                        <tr>
+                        <th scope=""><?=$votante->nombres?></th>
+                        <td><?=$votante->apellidos?></td>
+                        <td><?=$votante->cedulaV?></td>
+                        <td><?=$votante->zodiaco?></td>
+                        </tr>
+                    <?php
+                        }
+                    ?>
+            </table>
+        </div>
+    </div>
+</form>
+
+
 
                 <!-- Modal -->
             <form action="" method="GET" id="frm2">
