@@ -166,9 +166,6 @@ if($_POST){
         <hr>
 
         <div class="row justify-content-between">
-            <div class="col-4">
-                <a href="<?= base_url('Votaciones/reportespdf') ?>"><button type="button" class="btn btn-secondary">Imprimir Resultados</button></a>
-            </div>
             <div class="col-4 text-right">
                 <a href="<?= base_url('Votaciones/Voletines') ?>"><button type="submit" class="btn btn-success">Finalizar</button></a>
             </div>
