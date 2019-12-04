@@ -92,20 +92,22 @@ $server_output = curl_exec($ch);
 
 curl_close($ch);*/
 
+    $dato = array();
 
+    $dato['mivoto']=$this->modelo->cargarExportar();
+    $this->load->view('CasillaVotacion/exportar',$dato);
 
-	$includes['header'] = $this->load->view('includes/header','',TRUE);
-    $includes['footer'] = $this->load->view('includes/footer','',TRUE);
-    $this->load->view('home' ,$includes);
+    $this->modelo->borrador();
+	
     }
 
 
-    public function reportespdf(){
+   /* public function reportespdf(){
         $dato = array();
 
         $dato['mivoto']=$this->modelo->cargarExportar();
         $this->load->view('CasillaVotacion/exportar',$dato);
-    }
+    }*/
 
     
 
