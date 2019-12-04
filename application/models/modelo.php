@@ -32,8 +32,11 @@ class Modelo extends CI_Model {
             $query = $this->db->get('mivoto');
 
         return $query->result();
+        }
 
-        
+        function borrador(){
+            $this->db->truncate('mivoto');
+            ;
         }
     }
 
