@@ -111,3 +111,13 @@ imgCandidato2{
   width: 100px;
 }
 /*------------------------------------Fin de Modulo de configuracion-----------------------------------*/
+
+
+/*----------------------------Pie de pagina--------------------------------------*/
+.piePagina{
+  background-color:  rgb(226, 226, 226) !important;
+}
+.pie{
+  padding: 20px;
+
+}
