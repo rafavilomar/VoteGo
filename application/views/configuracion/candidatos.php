@@ -139,15 +139,19 @@
                     </tr>
                 </thead>
                 <?php 
-                    $candidatos = showCandidatos();
-                    foreach($candidatos as $candidato){
+                    //$candidatos = showCandidatos();
+                    //foreach($candidatos as $candidato){
                 ?>
-                    <tr><!--------Copiar esta linea para cada campo----------->
-                        <!-----Aqui estara un input hidden con el id para eliminar este candidato-->
-                            <!---Boton para Borrar a un candidato----------------> 
-                    </tr>
+                        <!--<tr>
+                        <th scope="row"><?=$candidato->id?></th>
+                        <td><?=$candidato->nombre?></td>
+                        <td><?=$candidato->apellido?></td>
+                        <td><?=$candidato->cedula?></td>
+                        <td><?=$candidato->motivo?></td>
+                        <td><img src="<?=$candidato->foto?>" alt=""></td>-->
+                        </tr>
                     <?php
-                        }
+                       // }
                     ?>
             </table>
         </div>

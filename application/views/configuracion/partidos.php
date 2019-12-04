@@ -10,7 +10,7 @@
             $p->nvlNombre = $_POST['nvlNombre'];
             $p->nvlDescripcion = $_POST['nvlDescripcion'];
     
-            saveEleccion($p); //Validando al votante
+            saveEleccion($p);
         }
 ?>
 <div class="container">
