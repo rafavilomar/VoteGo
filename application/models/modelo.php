@@ -27,6 +27,14 @@ class Modelo extends CI_Model {
        /* $query = $this->db->get();
 
         return $query->result();*/
+
+        function cargarExportar(){
+            $query = $this->db->get('mivoto');
+
+        return $query->result();
+
+        
+        }
     }
 
 
