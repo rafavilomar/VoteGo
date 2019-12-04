@@ -4,23 +4,16 @@
     
     class Configuracion extends CI_Controller {
     
-        /*public function index()
-        {        
-            $includes['header'] = $this->load->view('includes/header','',TRUE);
-            $includes['footer'] = $this->load->view('includes/footer','',TRUE);
-            $this->load->view('')
-        }*/
-        public function sesion(){
-            $this->load->view('login');
-        }
-        public function registrarse(){
-            $this->load->view('register');
-        }
         public function index()
         {
-            $includes['header'] = $this->load->view('includes/header','',TRUE);
-            $includes['footer'] = $this->load->view('includes/footer','',TRUE);
-            $this->load->view('configuracion/elecciones', $includes);
+            if($this->session->userdata('login')){
+                $includes['header'] = $this->load->view('includes/header','',TRUE);
+                $includes['footer'] = $this->load->view('includes/footer','',TRUE);
+                $this->load->view('configuracion/elecciones', $includes);
+            }
+            else{
+                header('Location: '.base_url('sesion/login'));
+            }
         }
         public function partidos()
         {

@@ -60,21 +60,12 @@
         $CI->db->insert_batch('niveles', $todo);
         
     }
-    
-    /*function saveNiveles()
-    {
+    function showCandidatos(){
         $CI =& get_instance();
-        //para los niveles
-        $nvlNombre = $_POST['nvlNombre'];
-        $nvlDescripcion = $_POST['nvlDescripcion'];
-        $todo = array();
-        $eleccion = Consultas($dato->eleccion, 'nombre', 'elecciones');
-        foreach($nvlNombre as $k=>$nom){
-            $todo[] = array($eleccion->id_elecciones, $nom, $nvlDescripcion[$k]);
-        }
-        $CI->db->build_insert()
-        
-    }*/
+        $partido = Consultas($dato->partido, 'nombre', 'partidos');
+        $resultado = $CI->db->get('listado');
+        return $resultado->result();
+    }
 
     //!Consulta especifica
     function Consultas($nombre, $columna, $tabla){
