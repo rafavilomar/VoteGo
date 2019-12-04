@@ -89,11 +89,13 @@
 
     <!-----------------------Candidatos del nivel----------------------------------------------->
     <div class="container">
+
+   <!-- --><form method="post" action="<?= base_url('Votaciones/Voletines') ?>">
         <div class="row align-center">
             <!----Casilla del candidato----------------------------------->
-            <!----Esto debe ir en una funcion para que se genere dependiendo de la cantidad de candidatos-----
+            <!----Esto debe ir en una funcion para que se genere dependiendo de la cantidad de candidatos------>
             
-            foreach ($query->result() as $key) {
+          <!--  foreach ($query->result() as $key) {
             echo $key->nombre.'<br>';
             echo $key->nombres.'<br>';------>
 
@@ -102,24 +104,7 @@
 
                 echo "
 
-                    <script >
-
-                        incremento=0;
-                        function crear(){
-                            incremento++;
-                            field = document.getElementById('field');
-                        contenedor = document.createElement('div');
-                        contenedor.id = 'div'+incremento;
-                        field.appendChild(contenedor);
-
-                        boton = document.createElement('input');
-                        boton.type = 'hidden';
-                        boton.name = 'text'+'[ ]';
-                        boton.value='{$key->nombres} {$key->nombre} {$key->titulo}';
-                        contenedor.appendChild(boton);
-                        }
-
-                        </script>
+                   
                     
                     <div class='col-md-4 border border-secondary candidato'>
                     <img class='card-img-top imgCandidato' src='{$key->foto}' 
@@ -133,8 +118,7 @@
                             <dt class='col-sm-2'>Cargo:</dt>
                             <dd class='col-sm-10'>{$key->titulo}</dd>
                         </div>
-                        <fieldset id='field'>
-                        <input type='button' value='Votar' onclick='crear();' class='btn btn-primary'>
+                        <input type='button' value='Votar' class='btn btn-primary'>
                     </div>
                 </div>
                     
@@ -172,10 +156,11 @@
                 <a href="<?= base_url('Votaciones/reportespdf') ?>"><button type="button" class="btn btn-secondary">Imprimir Resultados</button></a>
             </div>
             <div class="col-4 text-right">
-                <a href="<?= base_url('Votaciones/Voletines') ?>"><button type="submit" class="btn btn-success">Finalizar</button></a>
+                <a href=""><button type="submit" class="btn btn-success">Finalizar</button></a>
             </div>
         </div>
-
+        
+            <!----></form>
     </div>
     <!-----------------------Fin de candidatos del nivel----------------------------------------------->
 
