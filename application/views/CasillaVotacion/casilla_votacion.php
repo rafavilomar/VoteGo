@@ -1,10 +1,4 @@
-<?php
-if($_POST){
-    echo $_POST['cedulaC'];
-}
 
-
-?>
 <!DOCTYPE html>
 <html lang="en">
 
