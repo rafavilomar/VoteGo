@@ -1,3 +1,10 @@
+<?php
+    //Verificamos al votante
+    if(isset($_GET['V'])){
+        $votante = verificarVotante($_GET['cedula']);
+    }
+?>
+
 <!DOCTYPE html>
 <html lang="en">
 
@@ -56,7 +63,7 @@
     </header>
 
     <div class="container prueba">
-
+        <p><?= isset($votante)? $votante->cedulaV:"Fallo al mostrar cedula"?></p><!--Aqui deberia imprimirse la cedula por lo menos----------->
     </div>
     <!-----------------------Titulo del nivel----------------------------------------------->
     <hr>
