@@ -57,7 +57,7 @@
     </header>
 
     <div class="container prueba">
-
+        <p><?= isset($votante)? $votante->cedulaV:"Fallo al mostrar cedula"?></p><!--Aqui deberia imprimirse la cedula por lo menos----------->
     </div>
     <!-----------------------Titulo del nivel----------------------------------------------->
     <hr>

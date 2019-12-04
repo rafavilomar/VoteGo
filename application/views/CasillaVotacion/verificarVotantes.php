@@ -1,11 +1,7 @@
 
 
 <?= $header ?>
-<?php
-    if($_GET){
-        header("Location: ". base_url('votaciones/votar'));
-    }
-?>
+
 
 <br><br><br>
 <div class="contenedor">
@@ -13,7 +9,7 @@
     <button style="margin-top:200px" class="btn btn-outline-info btn-lg btn1" type="button" data-toggle="modal" data-target="#modalV">Verificar Cedula</button>
 </div>
 <!-- Modal -->
-<form action="" method="GET" id="frm2">
+<form action="<?= base_url('votaciones/votar')?>" method="GET" id="frm2">
     <div class="modal fade" id="modalV" tabindex="-1" role="dialog" aria-labelledby="exampleModalCenterTitle" aria-hidden="true">
         <div class="modal-dialog modal-dialog-centered" role="document">
             <div class="modal-content">
