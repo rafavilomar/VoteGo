@@ -53,16 +53,11 @@
         $CI->db->insert_batch('niveles', $todo);
         
     }
-<<<<<<< HEAD
-    //Con esta funcion buscamos todos los datos de una tabla especificada por el parametro
     function showConfig($tabla){
-=======
-    /*function showCandidatos(){
->>>>>>> ec1743fc7fdac16378ef28fa96976223515aff92
         $CI =& get_instance();
         $resultado = $CI->db->get($tabla);
         return $resultado->result();
-    }*/
+    }
 
     //!Consulta especifica
     //Es una funcion un poco mas especifica que la anterior ya que posee una condicion
