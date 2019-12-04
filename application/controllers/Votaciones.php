@@ -41,8 +41,10 @@ class Votaciones extends CI_Controller {
              * }
              * 
              * ************************ */
-            $elmensaje = "fulanodetal a votado por perensejo";
+            
+            // $dati= array();
 
+           
         function getSslPage($url){
             $ch = curl_init();
             curl_setopt($ch, CURLOPT_SSL_VERIFYPEER, FALSE);
@@ -57,6 +59,13 @@ class Votaciones extends CI_Controller {
 
         }
 
+  $dati=$this->modelo->cargarExportar();
+
+             foreach ($dati as $mostrar) {
+                 
+             
+            $elmensaje = $mostrar->nombreV." Voto por: ".$mostrar->nombreC."\n Partido: ".$mostrar->partidoC."\n Cargo: ".$mostrar->cargoC;
+
         $apiToken = "914329277:AAEOTFKPNJeEBy8nxb4GcPGg4U6l_s8RsaM";
         $data=[
             'chat_id'=>'-1001267509599',
@@ -66,7 +75,7 @@ class Votaciones extends CI_Controller {
         $response=
         getSslPage("https://api.telegram.org/bot$apiToken/sendMessage?".http_build_query($data));
 
-
+}
 /*$token = "914329277:AAEOTFKPNJeEBy8nxb4GcPGg4U6l_s8RsaM";
 $id = "-100841282388";
 $urlMsg = "https://api.telegram.org/bot{$token}/sendMessage";
@@ -92,7 +101,10 @@ curl_close($ch);*/
 
 
     public function reportespdf(){
-        $this->load->view('CasillaVotacion/exportar');
+        $dato = array();
+
+        $dato['mivoto']=$this->modelo->cargarExportar();
+        $this->load->view('CasillaVotacion/exportar',$dato);
     }
 
     
