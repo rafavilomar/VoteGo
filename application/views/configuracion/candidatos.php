@@ -120,7 +120,7 @@
 
 <!----------------Tabla que muestra a los candidatos de este partido--------------------->
 
-<form method="POST" action="" id="frm">
+<form method="POST" action="">
     <div class=" container justify-content-center">
         <!--Tabla con datos de personal------------>
         <div class="">
@@ -138,15 +138,16 @@
                     <th scope="col"></th>
                     </tr>
                 </thead>
-                <?php
-                    //!Funcion para mostrar los datos de los empleados
+                <?php 
+                    $candidatos = showCandidatos();
+                    foreach($candidatos as $candidato){
                 ?>
                     <tr><!--------Copiar esta linea para cada campo----------->
                         <!-----Aqui estara un input hidden con el id para eliminar este candidato-->
                             <!---Boton para Borrar a un candidato----------------> 
                     </tr>
                     <?php
-                        
+                        }
                     ?>
             </table>
         </div>
